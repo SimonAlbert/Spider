@@ -44,9 +44,12 @@ class Wassup:
         except Exception:
             self.driver.execute_script("arguments[0].click();", self.driver.find_element_by_class_name('weibo-login'))
         time.sleep(2)
-        self.driver.find_element_by_xpath('//*[@id="pl_login_logged"]/div/div[2]/div/input').send_keys('17853260016')
+        #######################
+        # 这里的账号密码已经隐藏#
+        #######################
+        self.driver.find_element_by_xpath('//*[@id="pl_login_logged"]/div/div[2]/div/input').send_keys()
         time.sleep(1)
-        self.driver.find_element_by_xpath('//*[@id="pl_login_logged"]/div/div[3]/div/input').send_keys('lomx2731269***')
+        self.driver.find_element_by_xpath('//*[@id="pl_login_logged"]/div/div[3]/div/input').send_keys()
         time.sleep(1)
         self.driver.find_element_by_xpath('//*[@id="pl_login_logged"]/div/div[3]/div/input').send_keys(Keys.ENTER)
         time.sleep(3)
